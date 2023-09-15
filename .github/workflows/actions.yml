@@ -1,0 +1,46 @@
+# Name of workflow
+name: Python Temp Test
+
+#Trigger entry for both push and pull requests
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  #Allows actions to be executed manually on github
+  workflow_dispatch:
+#Specified job(s)
+jobs:
+  #Test jobs to be executed
+  test:
+    #Operating system or environment for exectution
+    runs-on: ubuntu-latest
+
+    # #Set default working directory
+    # defaults:
+    #   run:
+    #     working-directory: ./myapp/
+    # # Set prefered Python versions
+    # # strategy:
+    # #   matrix:
+    # #     python-version: [3.9, 3.11]
+
+    # #Steps to define the execution of workflow
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      #install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      #- name: Lint with pylint
+
+      - name: Testing Code
+        run: python ./myapp/test_main.py
