@@ -14,7 +14,7 @@
     * Creates and saves both a descriptive analysis and a distribution bar chart from the input file
         * the output is then saved in the reports folder as a pdf file (Automobiles_Report.pdf)
     * It applys mpg_cat() function on mpg column of the input file and creates an excell sheet with the results
-        * the output of this process is also saved in the reports folder under the name: automobiles_updated.xlsx
+        * the output of this process is also saved in the reports folder under the name: Automobiles_Desc.xlsx
    
     * It then alerts the user with a success message
 
@@ -22,7 +22,7 @@
 1. A simple unit test implementation is provided in myapp/test_main.py as follows:
     * test_count function --> test if the value count of the dataset is as expected
     * test_my_stats --> uses polars's assert_frame_equal testing feature to confirm the quality of two dataframes
-2. This test wll also be executed by github actions. However, manual testing can also be done either with the via Make file or by running python myapp/test_main.py
+2. This test wll also be executed by github actions. However, manual testing can also be done either via Make file or by running python myapp/test_main.py
 
 
 [def]: https://github.com/nogibjj/oo46_Python_Temp_W3/actions/workflows/actions.yml
