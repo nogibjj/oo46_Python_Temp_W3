@@ -1,20 +1,24 @@
-import pandas as pd
+import polars as pl
 
 
 def read_csv():
-    df = pd.read_csv("./dsets/automobiles.csv")
+    df = pl.read_csv("./dsets/automobiles.csv")
     return df
-    pass
+    
+
 
 def mpg_cat(mpg):
     if mpg < 15:
-        return ("Low")
+        return "Low"
     elif mpg < 25:
-        return ("Moderate")
+        return "Moderate"
     else:
-        return ("High")
-    pass
+        return "High"
+    
+
 
 def my_stats(df):
-    return df.describe()
-    pass
+    # my_df = read_csv()
+    car_dataset = df.select("mpg", "cyl", "displ", "hp", "weight", "accel")
+    return car_dataset.describe()
+    

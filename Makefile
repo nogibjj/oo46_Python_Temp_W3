@@ -1,24 +1,22 @@
 #!/usr/bin/env bash
 # set -e
-  install:
-  	python -m pip install --upgrade pip
-	  pip install -r requirements.txt
+install:
+	python -m pip install --upgrade pip
+		pip install -r requirements.txt
 
-  test:
-  	python ./test_main.py
+format:	
+	black myapp/*.py 
 
- format:	
-  	black *.py 
-
-#  lint:
-#  	pylint --disable=R,C --ignore-patterns=test_.*?py *.py myapp/*.py
+lint:
+	pylint --disable=R,C myapp/*.py
 
 #  container-lint:
 #  	docker run --rm -i hadolint/hadolint < Dockerfile
 
-#  refactor: format lint
+test:
+	python myapp/test_main.py
 
-#  deploy:
-#  	#deploy goes here
+deploy:
+	python myapp/main.py
 		
-#  all: install lint test format deploy
+all: install lint test format deploy
