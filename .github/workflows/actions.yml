@@ -47,9 +47,10 @@ jobs:
         run: |
           make lint
 
-      - name: Run App
-        run: python myapp/main.py
-
       - name: Test
         run: |
           make test
+
+      - name: Run App
+        run: |
+          make deploy
