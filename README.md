@@ -27,7 +27,7 @@
 ### Sample descriptive analysis of the automobiles dataset
 ![Descriptive Report](img/desc_stats.PNG)
 
-### Bar Chart of the distribution of car makes by origin
+### Bar Chart of the distribution of car models by origin
 ![Bar Chart](img/bar.PNG)
 
 
