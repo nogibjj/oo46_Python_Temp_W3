@@ -18,13 +18,18 @@
    
     * It then alerts the user with a success message. You can find summary reports below.
 
-##Testing...
+## Testing...
 1. A simple unit test implementation is provided in myapp/test_main.py as follows:
     * test_count function --> test if the value count of the dataset is as expected
     * test_my_stats --> uses polars's assert_frame_equal testing feature to confirm the quality of two dataframes
 2. This test wll also be executed by github actions. However, manual testing can also be done either via Make file or by running python myapp/test_main.py
 
 ### Sample descriptive analysis of the automobiles dataset
-![Report](reports/Automobiles_Report.pdf)
+![Descriptive Report](img/desc_stats.PNG)
+
+### Bar Chart of the distribution of car makes by origin
+![Bar Chart](img/bar.PNG)
+
+
 
 [def]: https://github.com/nogibjj/oo46_Python_Temp_W3/actions/workflows/actions.yml
