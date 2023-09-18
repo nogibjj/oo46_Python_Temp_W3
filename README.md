@@ -2,7 +2,7 @@
 
 # Template for Python projects (Week 3)
 
-##The current implementation of the Mini-project (Week_3) can be executed as follows:
+## The current implementation of the Mini-project (Week_3) can be executed as follows:
 
 1. All dependencies needed for execution can be found in the [requirement.txt](https://github.com/nogibjj/oo46_Python_Temp_W3/blob/main/requirements.txt) file
 2. These dependencies will be installed  by github actions using the Make file.
@@ -18,7 +18,7 @@
    
     * It then alerts the user with a success message. You can find summary reports below.
 
-## Testing...
+##Testing...
 1. A simple unit test implementation is provided in myapp/test_main.py as follows:
     * test_count function --> test if the value count of the dataset is as expected
     * test_my_stats --> uses polars's assert_frame_equal testing feature to confirm the quality of two dataframes
