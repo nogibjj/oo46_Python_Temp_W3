@@ -16,7 +16,7 @@ lint:
 test:
 	python myapp/test_main.py
 
-deploy:
+run:
 	python myapp/main.py
 		
-all: install lint test format deploy
+all: install lint test format run

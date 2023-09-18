@@ -1,5 +1,5 @@
 # Name of workflow
-name: Python Temp Test
+name: Python Temp
 
 #Trigger entry for both push and pull requests
 on:
@@ -53,4 +53,6 @@ jobs:
 
       - name: Run App
         run: |
-          make deploy
+          make run
+
+   
